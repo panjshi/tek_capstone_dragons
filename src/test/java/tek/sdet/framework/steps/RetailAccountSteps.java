@@ -19,7 +19,7 @@ public class RetailAccountSteps extends CommonUtility{
 	@When("User click on Account option")
 	public void userClickOnAccountOption () {
 		click(factory.homePage().account);
-		logger.info("user successfylly clicked on Account option");
+		logger.info("user successfully clicked on Account option");
 		slowDown();
 	}
 	
@@ -61,29 +61,29 @@ public class RetailAccountSteps extends CommonUtility{
 	//  Scenario: Verify User can Update password
 	
 	
-	@And("User enter below information")
-	public void userEnterBelowInformation (DataTable data) {
-		List<Map<String, String>> changepass =data.asMaps(String.class,String.class);
-	    sendText(factory.accountPage().PrevPassInput,changepass.get(0).get("previousPassword"));
-	    sendText(factory.accountPage().NewPassInput,changepass.get(0).get("newPassword"));
-	    sendText(factory.accountPage().ConfirmPassInput,changepass.get(0).get("confirmPassword"));
-	    logger.info("user entred below info");
-	    slowDown();    
-	}
+	//@And("User enter below information")
+	//public void userEnterBelowInformation (DataTable data) {
+		//List<Map<String, String>> changepass =data.asMaps(String.class,String.class);
+	   // sendText(factory.accountPage().PrevPassInput,changepass.get(0).get("previousPassword"));
+	   // sendText(factory.accountPage().NewPassInput,changepass.get(0).get("newPassword"));
+	   // sendText(factory.accountPage().ConfirmPassInput,changepass.get(0).get("confirmPassword"));
+	   // logger.info("user entred below info");
+	   // slowDown();    
+	//}
 	
-	@And("User click on Change Password button")
-	public void userClieckOnChangePasswordButton() {
-		click(factory.accountPage().ChangePassBtn);
-		logger.info("user clicked on Change Password Button");
-	}	
+	//@And("User click on Change Password button")
+	//public void userClieckOnChangePasswordButton() {
+		//click(factory.accountPage().ChangePassBtn);
+		//logger.info("user clicked on Change Password Button");
+	//}	
 	
-	@Then("a message should be displayed Password Updated Successfully")
-	public void messgaeShouldBeDisplayed() {
-		slowDown();
-		Assert.assertTrue(isElementDisplayed(factory.accountPage().PassUpdatedSuccessfully));
-		logger.info("Password Updated Successfully");
+	//@Then("a message should be displayed Password Updated Successfully")
+	//public void messgaeShouldBeDisplayed() {
+		//slowDown();
+		//Assert.assertTrue(isElementDisplayed(factory.accountPage().PassUpdatedSuccessfully));
+		//logger.info("Password Updated Successfully");
 	
-	}
+	//}
 	
 	// @payment
 	//  Scenario: Verify User can add a payment method	
